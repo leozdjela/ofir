@@ -1,0 +1,510 @@
+.nav{
+    list-style-type: none;
+}
+
+li{
+    float: left;
+}
+
+a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #010c03ad;
+}
+
+.pozadina{
+    background-image: url(Fotografije/logo2.png);
+
+}
+
+.logo{
+    float: right;
+}
+
+.nav-list{
+    float: left;
+}
+
+.povratak{
+    float: right;
+    border: 2px solid #222831;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.povratak:hover{
+    opacity: 0.8;
+}
+
+.podnozje{
+    text-align: center;
+}
+
+
+
+.upit{
+    margin-top: 0;
+}
+
+
+.nav a:hover{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.37);
+}
+
+.aktivna{
+    border-bottom: 3px solid grey;
+}
+
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+    
+}
+
+.nav-usluge a{
+    background-color: grey;
+    border: 1px solid #222831; 
+    text-decoration: underline;
+    width: 10cm;
+}
+
+.nav-usluge a:hover{
+    border-top: 5px solid #222831;
+    border-bottom: 5px solid #222831;
+
+    
+}
+
+
+
+
+/* Grid - početna stranica */
+.navigacije{grid-area: navigacije;}
+.vijest1{grid-area: vijest1;}
+.o-nama{grid-area: o-nama;}
+.vijest2{grid-area: vijest2;}
+.video{grid-area: video;}
+.pozadina{grid-area: pozadina;}
+.vijest3{grid-area: vijest3;}
+.rest{grid-area: rest;}
+.rest2{grid-area: rest2;}
+
+
+
+/* Grid - usluge */
+.nav-usluge{grid-area: nav-usluge;}
+.usluga1{grid-area: usluga1;}
+.usluga2{grid-area: usluga2;}
+.usluga3{grid-area: usluga3;}
+.usluga4{grid-area: usluga4;}
+
+
+
+
+
+/* Grid - katalog */
+.slika1{ grid-area: jedan;}
+.slika2{ grid-area: dva;}
+.slika3{ grid-area: tri;}
+.slika4{ grid-area: cetiri;}
+.slika5{ grid-area: pet;}
+.slika6{ grid-area: sest;}
+.slika7{ grid-area: sedam;}
+.slika8{ grid-area: osam;}
+.slika9{ grid-area: devet;}
+.slika10{ grid-area: deset;}
+.slika11{ grid-area: jedanaest;}
+.slika12{ grid-area: dvanaest;}
+
+
+/* Grid - kontakt */
+.obrazac{grid-area: obrazac;}
+.lokacija{grid-area: lokacija;}
+
+
+
+/* Stolno računalo */
+@media (min-width: 1281px) {
+
+    .index{
+        display: grid;
+        grid-template-areas: 
+        "navigacije     navigacije      navigacije      navigacije"
+        "pozadina       pozadina    pozadina        pozadina"
+        "vijest1        vijest2      o-nama      o-nama"
+        "video        vijest3      vijest3       vijest3"
+        ;
+        row-gap: 1rem;
+        column-gap: 3cm;
+        
+    }
+
+    
+    .katalog{
+        display: grid;
+        grid-template-areas:
+        "navigacije    navigacije    navigacije       navigacije"
+        "pozadina      pozadina      pozadina         pozadina"
+        "jedan         dva           tri              cetiri"
+        "pet           sest          sedam            osam"
+        "devet         deset         jedanaest        dvanaest";
+        row-gap: 1rem;
+        column-gap: 3cm;
+    }
+
+    .kontakt{
+        display: grid;
+        grid-template-areas:
+        "navigacije     navigacije      navigacije      navigacije"
+        "pozadina       pozadina        pozadina        pozadina"
+        "obrazac        obrazac         lokacija        lokacija"
+        "obrazac        obrazac         lokacija        lokacija";
+        row-gap: 1rem;
+        column-gap: 3cm;
+    }
+
+    .usluge{
+        display: grid;
+        grid-template-areas: 
+        "navigacije     navigacije          navigacije          navigacije"
+        "pozadina       pozadina            pozadina            pozadina"
+        "nav-usluge     usluga1             usluga1             usluga1"
+        "nav-usluge     usluga2          usluga2             usluga2"
+        "nav-usluge     usluga3          usluga3             usluga3"
+        "nav-usluge     usluga4          usluga4             usluga4";
+        row-gap: 1rem;
+        column-gap: 3cm;
+    }
+
+    
+}
+
+/* Tablet */
+
+@media (min-width:801px) and (max-width:1281px){
+
+    
+    .index{
+        display: grid;
+        grid-template-areas: 
+        "navigacije     navigacije"
+        "pozadina       pozadina"
+        "vijest1    o-nama"
+        "vijest2   vijest3"
+        "video        podnozje";
+        row-gap: 1rem;
+        column-gap: 3cm;
+    
+    }
+
+    
+    .katalog{
+        display: grid;
+        grid-template-areas:
+        "navigacije         navigacije              navigacije"
+        "pozadina           pozadina                pozadina"
+        "jedan      dva     tri"
+        "cetiri     pet     sest"
+        "sedam      osam        devet"
+        "deset      jedanaest       dvanaest";
+        row-gap: 2rem;
+        column-gap: 2rem;
+        
+    }
+
+    .kontakt{
+        display: grid;
+        grid-template-areas:
+        "navigacije     navigacije"
+        "pozadina       pozadina"
+        "obrazac        lokacija"
+        "obrazac        lokacija";
+        row-gap: 1rem;
+        column-gap: 3cm;
+    }
+
+    .usluge{
+        display: grid;
+        grid-template-areas: 
+        "navigacije     navigacije"
+        "pozadina       pozadina"
+        "nav-usluge        usluga1"
+        "nav-usluge         usluga2"
+        "nav-usluge         usluga3"
+        "nav-usluge         usluga4";
+        row-gap: 1rem;
+        column-gap: 3cm;
+    }
+
+    .video{
+        display: flex;
+        justify-content: center;
+    }
+
+    .rest{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Mobitel */
+
+@media (max-width:801px){
+
+    .index-grid{
+        display: grid;
+        grid-template-areas: 
+        "navigacije"
+        "pozadina"
+        "vijest1"
+        "o-nama"
+        "vijest2"
+        "vijest3"
+        "video"
+        ;
+        row-gap: 1rem;
+        column-gap: 3cm;
+    }
+
+    .katalog{
+        display: grid;
+        grid-template-areas:
+        "navigacije             navigacije"
+        "pozadina               pozadina"
+        "jedan      dva"
+        "tri        cetiri"
+        "pet        sest"
+        "sedam      osam"
+        "devet      deset"
+        "jedanaest      dvanaest";
+        row-gap: 2rem;
+        column-gap: 2rem;
+        
+        
+    }
+
+    .kontakt{
+        display: grid;
+        grid-template-areas:
+        "navigacije"
+        "pozadina"
+        "lokacija"
+        "obrazac";
+        row-gap: 1rem;
+        column-gap: 3cm;
+    }
+
+    .usluge{
+        display: grid;
+        grid-template-areas: 
+        "navigacije     "
+        "pozadina       "
+        "nav-usluge        "
+        "usluga1"
+        "usluga2"
+        "usluga3"
+        "usluga4";
+        row-gap: 1rem;
+        column-gap: 3cm;
+        
+    }
+
+    .video{
+        display: flex;
+        justify-content: center;
+    }
+
+    .rest{
+        display: flex;
+        justify-content: center;
+    }
+
+    .lokacija{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+/* Katalog*/
+
+.slika1{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    
+}
+
+.slika2{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    
+}
+
+.slika3{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    
+}
+
+.slika4{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    
+}
+
+.slika5{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    
+}
+
+.slika6{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    
+}
+
+.slika7{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    
+}
+
+.slika8{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    
+}
+
+.slika9{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    
+}
+
+.slika10{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+.slika11{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+.slika12{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+
+
+.katalog button{
+  border: none;
+  outline: 0;
+  padding: 10px;
+  color: rgb(34, 189, 47);
+  background-color: #222831;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.katalog button:hover{
+    opacity: 0.8;   
+}
+
+.gumb_{
+    border: none;
+    outline: 0;
+    margin-left: 25%;
+    margin-right: 25%;
+    color: black;
+    background-color: #222831;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 5cm;
+    padding: 10px;
+}
+
+
+
+.gumb_:hover{
+    opacity: 0.7;
+}
+
+#vrh{
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    z-index: 90;
+    font-size: 15px;
+    border: none;
+    background-color: #33582e;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#vrh:hover{
+    opacity: 0.7;
+}
+
+.obrazac{
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+#ime{
+    width: 5cm;
+    margin-left: 25%;
+    margin-right: 25%;
+    
+}
+
+#prezime{
+    width: 5cm;
+    margin-left: 25%;
+    margin-right: 25%;   
+}
+
+
+#email{
+    width: 5cm;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#upit{
+    width: 5cm;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+fieldset{
+    border-radius: 2em;
+    border: 1px solid #153463;
+    background-color: whitesmoke;
+}
+
+.legenda{
+    font-size: xx-large;
+}
