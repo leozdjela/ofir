@@ -8,12 +8,31 @@
     <title>Katalog</title>
 </head>
 <body style="background-color: rgb(112, 146, 136);">
+    <div class="hamburger">
+
     
+        <div class="topnav">
+            <a href="katalog.html" class="active">Katalog</a>
+          <div id="menu">
+            <a href="usluge.html">Usluge</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="index.html">Početna</a>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+    </div>        
     <div class="katalog">
+
+     
+
         
         <div class="navigacije">
 
         <nav class="nav">
+            
+
             <div class="logo">
             <li><a href="index.html" class="logoo">
                   <img src="slike/logo.png" width="30" height="30" alt="Logo">    
@@ -28,16 +47,18 @@
                 </li>
         
                 <li>
+                    <a href="katalog.html" aria-current="page" class="aktivna">Katalog</a>
+                </li>
+
+                <li>
+                        <a href="usluge.html">Usluge</a>
+                </li>
+
+                <li>
                 <a href="index.html">Početna</a>
                 </li>
 
-                <li>
-                <a href="usluge.html">Usluge</a>
-                </li>
-
-                <li>
-                <a href="katalog.html" aria-current="page" class="aktivna">Katalog</a>
-                </li>
+                
             </div>
         </nav>
                         
@@ -45,18 +66,19 @@
         </div>
         
         <div class="pozadina">
-            <img src="slike/background.jpg" alt="Pozadina" width="100%" height="150px" >
+            <img src="slike/background.jpg" alt="Pozadina" >
 
         </div>
 
-<hr>
+
+<div class="slike">
    <div class="slika1">
     <img src="slike/burger.jpg" alt="Burger">
     <p>
         Naziv: Burger sa domaćim špekom <br>
         Cijena: 5.50€
     </p>
-    <button class="pr-gumb">Kupi</button>
+    <button>Kupi</button>
    </div>
 
    <br>
@@ -180,7 +202,7 @@
     <button>Kupi</button>
    </div>
 
-   
+</div>
    
 </div>
 <button onclick="topFunction()" id="vrh-gumb">Povratak na vrh</button>
@@ -190,6 +212,6 @@
             ©Ofir Praksa - Leo Zdjelarević 2023
         </p>
      </footer>
-    <script src="java.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
