@@ -13,8 +13,10 @@ a{
     color: #010c03ad;
 }
 
-.pozadina{
+.pozadina img{
     background-image: url(Fotografije/logo2.png);
+    width: 100%;
+    height: auto;
 
 }
 
@@ -116,15 +118,55 @@ body{
 .slika12{ grid-area: dvanaest;}
 
 
+
+.slike{
+    display: grid;
+    grid-template-areas: 
+    "jedan  dva tri cetiri"
+    "pet    sest    sedam   osam"
+    "devet  deset   jedanaest   dvanaest";
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.slike img {
+    display: flex;
+    align-content: center;
+    max-width: auto;
+    height: 50%;
+    margin-bottom: 10px;
+    margin: 10px;
+}
+
+.slike p{
+    margin-bottom: 10px;
+    font-size: 0.7rem;
+}
+
+.slike button {
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 0.5 rem;
+    
+}
+
+.slike button:hover{
+    background-color: #005daa;
+}
+
+
 /* Grid - kontakt */
 .obrazac{grid-area: obrazac;}
 .lokacija{grid-area: lokacija;}
-
+.adresa{grid-area: adresa;}
 
 
 /* Stolno računalo */
 @media (min-width: 1281px) {
-
     .index{
         display: grid;
         grid-template-areas: 
@@ -139,17 +181,7 @@ body{
     }
 
     
-    .katalog{
-        display: grid;
-        grid-template-areas:
-        "navigacije    navigacije    navigacije       navigacije"
-        "pozadina      pozadina      pozadina         pozadina"
-        "jedan         dva           tri              cetiri"
-        "pet           sest          sedam            osam"
-        "devet         deset         jedanaest        dvanaest";
-        row-gap: 1rem;
-        column-gap: 3cm;
-    }
+   
 
     .kontakt{
         display: grid;
@@ -175,13 +207,17 @@ body{
         column-gap: 3cm;
     }
 
-    
+   .topnav{
+    display: none;
+   } 
 }
 
 /* Tablet */
 
 @media (min-width:801px) and (max-width:1281px){
-
+.topnav{
+    display: none;
+}
     
     .index{
         display: grid;
@@ -247,8 +283,64 @@ body{
 }
 
 /* Mobitel */
+/* Hamburger menu */
+.pocetna{grid-area: pocetna;}
+.usluge1{grid-area: usluge;}
+.katalog1{grid-area: katalog;}
+.kontakt1{grid-area: kontakt;}
+
+
 
 @media (max-width:801px){
+    .nav-list{
+        display: none;
+    }
+    .hamburger {
+        max-width: 480px;
+        margin: auto;
+        background-color: #555;
+        height: 50px;
+        color: white;
+        border-radius: 1px;
+      }
+      
+      .topnav {
+        overflow: hidden;
+        background-color: #333;
+        position: relative;
+      }
+      
+      .topnav #menu {
+        display: none;
+      }
+      
+      .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+      }
+      
+      .topnav a.icon {
+        background: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      
+      .active {
+        background-color: #21382f;
+        color: white;
+      }
+
+      
 
     .index-grid{
         display: grid;
@@ -268,8 +360,8 @@ body{
     .katalog{
         display: grid;
         grid-template-areas:
-        "navigacije             navigacije"
-        "pozadina               pozadina"
+        "navigacije     navigacije"
+        "pozadina       pozadina"
         "jedan      dva"
         "tri        cetiri"
         "pet        sest"
@@ -331,82 +423,81 @@ body{
 .slika1{
     width: 200px;
     height: 200px;
-    text-align: center;
+    justify-content: center;
     
 }
 
 .slika2{
     width: 200px;
     height: 200px;
-    text-align: center;
+    justify-content: center;
     
 }
 
 .slika3{
     width: 200px;
     height: 200px;
-    text-align: center;
+    justify-content: center;
     
 }
 
 .slika4{
     width: 200px;
     height: 200px;
-    text-align: center;
+    justify-content: center;
     
 }
 
 .slika5{
     width: 200px;
     height: 200px;
-    text-align: center;
+    justify-content: center;
     
 }
 
 .slika6{
     width: 200px;
     height: 200px;
-    text-align: center;
+    justify-content: center;
     
 }
 
 .slika7{
     width: 200px;
     height: 200px;
-    text-align: center;
+    justify-content: center;
     
 }
 
 .slika8{
     width: 200px;
     height: 200px;
-    text-align: center;
+    justify-content: center;
     
 }
 
 .slika9{
     width: 200px;
     height: 200px;
-    text-align: center;
+    justify-content: center;
     
 }
 
 .slika10{
     width: 200px;
     height: 200px;
-    text-align: center;
+    justify-content: center;
 }
-
 .slika11{
     width: 200px;
     height: 200px;
-    text-align: center;
+    justify-content: center;
 }
 
 .slika12{
     width: 200px;
     height: 200px;
-    text-align: center;
+    justify-content: center;
 }
 
 
@@ -434,7 +525,7 @@ body{
     margin-left: 25%;
     margin-right: 25%;
     color: black;
-    background-color: #222831;
+    background-color: rgb(34, 189, 47);
     cursor: pointer;
     font-size: 18px;
     font-family: 'Courier New', Courier, monospace;
@@ -469,40 +560,44 @@ body{
 
 .obrazac{
     margin: auto;
-    display: block;
+    display: flex;
     text-align: center;
+    margin-left: 25%;
+    margin-block-end: 25%;
 }
 
-#ime{
-    width: 5cm;
-    margin-left: 25%;
-    margin-right: 25%;
+.ime{
+    display: flex;
+}
+
+.prezime{
+    display: flex;
     
 }
 
-#prezime{
-    width: 5cm;
-    margin-left: 25%;
-    margin-right: 25%;   
+.posalji{
+    display: flex;
 }
 
 
-#email{
-    width: 5cm;
-    margin-left: 25%;
-    margin-right: 25%;
+.email{
+    display: flex;
 }
 
-#upit{
+
+.upit{
     width: 5cm;
     margin-left: 25%;
     margin-right: 25%;
+    align-items: center;
 }
+
 
 fieldset{
     border-radius: 2em;
     border: 1px solid #153463;
     background-color: whitesmoke;
+    justify-content: center;
 }
 
 .legenda{
