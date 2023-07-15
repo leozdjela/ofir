@@ -1,3 +1,6 @@
+*{
+    background-color: rgb(112, 146, 136) ;
+}
 .nav{
     list-style-type: none;
 }
@@ -126,16 +129,16 @@ body{
     "pet    sest    sedam   osam"
     "devet  deset   jedanaest   dvanaest";
     padding: 10px;
-    background-color: #f0f0f0;
+    margin-left: 70px;
 }
 
 .slike img {
     display: flex;
-    align-content: center;
+    justify-content: center;
     max-width: auto;
     height: 50%;
     margin-bottom: 10px;
-    margin: 10px;
+    margin-left: 50px;
 }
 
 .slike p{
@@ -225,28 +228,26 @@ body{
         "navigacije     navigacije"
         "pozadina       pozadina"
         "vijest1    o-nama"
-        "vijest2   vijest3"
-        "video        podnozje";
+        "vijest2   vijest2"
+        "vijest3    vijest3"
+        "video        video"
+        "podnozje   podnozje";
         row-gap: 1rem;
         column-gap: 3cm;
     
     }
 
-    
-    .katalog{
-        display: grid;
-        grid-template-areas:
-        "navigacije         navigacije              navigacije"
-        "pozadina           pozadina                pozadina"
-        "jedan      dva     tri"
-        "cetiri     pet     sest"
-        "sedam      osam        devet"
-        "deset      jedanaest       dvanaest";
-        row-gap: 2rem;
-        column-gap: 2rem;
-        
+      .slike {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
 
+    .slika {
+      flex-basis: calc(33.33% - 20px);
+      text-align: center;
+      margin-bottom: 20px;
+    }
     .kontakt{
         display: grid;
         grid-template-areas:
@@ -296,6 +297,7 @@ body{
         display: none;
     }
     .hamburger {
+        position: relative;
         max-width: 480px;
         margin: auto;
         background-color: #555;
@@ -356,34 +358,19 @@ body{
         row-gap: 1rem;
         column-gap: 3cm;
     }
-
-    .katalog{
-        display: grid;
-        grid-template-areas:
-        "navigacije     navigacije"
-        "pozadina       pozadina"
-        "jedan      dva"
-        "tri        cetiri"
-        "pet        sest"
-        "sedam      osam"
-        "devet      deset"
-        "jedanaest      dvanaest";
-        row-gap: 2rem;
-        column-gap: 2rem;
-        
-        
+   .slike {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
 
-    .kontakt{
-        display: grid;
-        grid-template-areas:
-        "navigacije"
-        "pozadina"
-        "lokacija"
-        "obrazac";
-        row-gap: 1rem;
-        column-gap: 3cm;
+    .slika {
+      flex-basis: calc(50% - 20px);
+      text-align: center;
+      margin-bottom: 20px;
     }
+   
+    
 
     .usluge{
         display: grid;
@@ -410,6 +397,7 @@ body{
         justify-content: center;
     }
 
+   
     .lokacija{
         display: flex;
         justify-content: center;
